@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhavika | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1d2a44;
+    }
+
+    /* ---------- CSS Grid layout ---------- */
+    .page {
+      display: grid;
+      min-height: 100vh;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "header  header"
+        "sidebar content";
+    }
+
+    .header  { grid-area: header; }
+    .sidebar { grid-area: sidebar; }
+    .content { grid-area: content; }
+
+    /* ---------- Header ---------- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 28px;
+      background: #1d2a44;
+      color: #ffffff;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav a {
+      color: #ffffff;
+      margin-left: 18px;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: #f2b705;
+    }
+
+    /* ---------- Sidebar ---------- */
+    .sidebar {
+      padding: 24px;
+      background: #2c3c5e;
+      color: #ffffff;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 6px;
+    }
+
+    .sidebar p {
+      margin-bottom: 10px;
+    }
+
+    .role {
+      color: #f2b705;
+    }
+
+    /* ---------- Main content ---------- */
+    .content {
+      padding: 28px;
+      background: #f5f6fa;
+    }
+
+    .content section {
+      margin-bottom: 28px;
+    }
+
+    .content h2 {
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .content a {
+      color: #1d4ed8;
+      font-weight: bold;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 600px) {
+      .page {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "content";
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- HEADER + NAV -->
+    <header class="header">
+      <a class="logo" href="#about">Bhavika</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Bhavika</h2>
+      <p class="role">Web Development Learner</p>
+      <p>I like building web pages with HTML and CSS.</p>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I am Bhavika. I am learning web development through the SkillPilots program.</p>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <p>1. Responsive Header - https://github.com/bhavika526/skillpilot_project_1</p>
+        <p>2. Portfolio Page using CSS Grid</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          GitHub:
+          <a href="https://github.com/bhavika526" target="_blank" rel="noopener">github.com/bhavika526</a>
+        </p>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
